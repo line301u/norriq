@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  padding-top: 6rem;
+  font-weight: normal;
+}
+body {
+  @apply bg-slate-100;
+}
+main {
+  margin: 0 auto;
+}
+h2 {
+  @apply text-lg;
+}
+h3 {
+  @apply text-sm;
+  @apply text-slate-700;
+  @apply font-light;
+}
+p {
+  @apply font-medium;
+  @apply text-sm;
+  @apply text-slate-600;
+}
