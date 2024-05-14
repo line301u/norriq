@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-xl self-end items-center gap-5">
+  <div class="flex flex-col sm:flex-row max-w-xl self-end items-center gap-5 ">
     <Dropdown v-model="filter.selectedGender" :options="filter.genderOptions" optionLabel="name" placeholder="Select a Gender" class="w-full md:w-14rem border border-slate-300" />
     <div class="flex align-items-center">
         <Checkbox v-model="filter.filterByAgeRange" :binary="true" name="ageRange" inputId="ageRange" pt:box:class="border border-slate-300"/>
@@ -7,7 +7,7 @@
     </div>
   </div>
   <Divider type="solid" class="border m-0 border-slate-200"/>
-  <div class="CardList grid grid-cols-2 lg:grid-cols-3 xl-grid-cols-4 gap-5">
+  <div class="CardList grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl-grid-cols-4 gap-5">
     <Person v-for="person in filteredPeople" :key="person.name" :person="person" />
   </div>
 </template>
